@@ -22,18 +22,16 @@ public class LongestSubString {
 		StringBuilder sb = new StringBuilder();
 		char[] inputChars = s.toCharArray();
 		int size = 1;
-		int temp = 0;
 
 		for (char c : inputChars) {
 			if (sb.indexOf(Character.toString(c)) == -1) {
 				sb.append(c);
 			} else {
-				temp = sb.length();
 				sb.replace(0, sb.indexOf(Character.toString(c)), "");
 				sb.append(c);
 			}
-			if (size < temp)
-				size = temp;
+			if (size < sb.length())
+				size = sb.length();
 		}
 		return size;
 	}
