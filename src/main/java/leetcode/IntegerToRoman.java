@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
 public class IntegerToRoman {
-
+//	https://leetcode.com/problems/integer-to-roman/
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		for (int i = 1;i<9999;i++) {
@@ -12,13 +12,7 @@ public class IntegerToRoman {
 		  }
 
 	}
-//	val.put('I', 1);
-//	val.put('V', 5);
-//	val.put('X', 10);
-//	val.put('L', 50);
-//	val.put('C', 100);
-//	val.put('D', 500);
-//	val.put('M', 1000);
+
 	
 	private static String convertIntegerToRoman (int num) {
 		if (num<1)

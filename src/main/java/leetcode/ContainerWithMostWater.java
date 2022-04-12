@@ -32,11 +32,4 @@ public class ContainerWithMostWater {
         return response;
     }
 
-	public boolean isMatch(String s, String p) {
-        
-        Pattern p1 = Pattern.compile(p);
-        Matcher m1 = p1.matcher(s);
-        return m1.matches();
-        
-    }
 }

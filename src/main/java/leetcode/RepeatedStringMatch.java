@@ -1,7 +1,16 @@
 package leetcode;
 
-public class RepeatedStringMatch {
+import java.util.Collections;
 
+public class RepeatedStringMatch {
+//	https://leetcode.com/problems/repeated-string-match/
+	
+/*	Given two strings a and b, return the minimum number of 
+	times you should repeat string a so that string b is a substring of it.
+	If it is impossible for b​​​​​​ to be a substring of a after repeating it, return -1. */
+
+
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -12,25 +21,20 @@ public class RepeatedStringMatch {
 		System.out.println(repeatedStringMatch("abc","cabcabca"));
 
 	}
-
+	
 	public static int repeatedStringMatch(String a, String b) {
-		int count = 1;
-		if (a.contains(b) || a == b || a.equals(b)) 
-			return count;
-		String temp = a;
-		while (a.length() <= b.length() * b.length()) {
-			if (a.contains(b) || a == b || a.equals(b)) {	
-				System.out.println(a);
-				System.out.println("count is " + count);
-				return count;
-			} else {
-				a = a.concat(temp);
-				count = count +1;
-				System.out.println("new a : " + a);
-				System.out.println("new count : " + count);
-			}
-		}
-		return -1;
+		
+		final int n = (int) Math.ceil((double) b.length() / (double) a.length());
+		System.out.println(n);
+	    final String s = String.join("", Collections.nCopies(n, a));
+	    System.out.println(s);
+	    if (s.contains(b))
+	      return n;
+	    if ((s + a).contains(b))
+	      return n + 1;
+	    return -1;
+		
+
 	}
 
 }
