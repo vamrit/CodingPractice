@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LuckyInteger {
+	
+//	https://leetcode.com/problems/find-lucky-integer-in-an-array/
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

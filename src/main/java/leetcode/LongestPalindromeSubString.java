@@ -1,6 +1,9 @@
 package leetcode;
 
 public class LongestPalindromeSubString {
+	
+//	https://leetcode.com/problems/longest-palindromic-substring/
+	
 	public static void main(String[] args) {
 		System.out.println(longestPalindrome("babad"));
 		System.out.println(longestPalindrome("cbbd"));

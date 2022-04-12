@@ -1,8 +1,11 @@
 package leetcode;
 
 public class LongestSubString {
+	
+//	https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
 	public static void main(String[] args) {
+		
 		// TODO Auto-generated method stub
 		System.out.println(longestSubString("abcabcbb"));
 		System.out.println(longestSubString("bbbbb"));
